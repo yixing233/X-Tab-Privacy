@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-Tab 隐私政策</title>
+    <link rel="stylesheet" href="css/root.css">
+    <style>
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --accent-color: #0078d4;
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.7);
+        }
+
+        [data-theme="light"] {
+            --glass-bg: rgba(255, 255, 255, 0.7);
+            --glass-border: rgba(0, 0, 0, 0.1);
+            --text-primary: #1a1a1a;
+            --text-secondary: #4a4a4a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+            background-color: var(--modal-bg-color, #0f0f0f);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 40px 20px;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(0, 120, 212, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(0, 120, 212, 0.05) 0%, transparent 40%);
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 50px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--glass-border);
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #fff 0%, #aaa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        [data-theme="light"] h1 {
+            background: linear-gradient(135deg, #000 0%, #444 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .last-updated {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        section {
+            margin-bottom: 35px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--accent-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 24px;
+            background: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+        }
+
+        strong {
+            color: var(--text-primary);
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 20px;
+        }
+
+        li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 12px;
+            color: var(--text-secondary);
+        }
+
+        li::before {
+            content: '•';
+            position: absolute;
+            left: 5px;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .highlight-box {
+            background: rgba(0, 120, 212, 0.08);
+            border-left: 4px solid var(--accent-color);
+            padding: 20px;
+            border-radius: 0 12px 12px 0;
+            margin-bottom: 25px;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid var(--glass-border);
+            margin: 40px 0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* 滚动条美化 */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--glass-border);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--text-secondary);
+        }
+    </style>
+</head>
+<body data-theme="dark">
+    <div class="container">
+        <header>
+            <h1>X-Tab 隐私政策</h1>
+            <p class="last-updated">最后更新日期：2026年3月16日</p>
+        </header>
+
+        <section>
+            <p>感谢您选择使用 <strong>X-Tab</strong> 扩展程序。我们非常重视您的隐私。本隐私政策旨在说明我们如何处理您的信息。</p>
+            
+            <div class="highlight-box">
+                <p>X-Tab 是一个以隐私为中心的扩展程序。</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>1. 我们收集的信息</h2>
+            <ul>
+                <li><strong>本地存储</strong>：您的所有设置（如壁纸偏好、CSS 自定义属性、网站快捷方式、天气城市等）均存储在您计算机的本地浏览器存储（IndexedDB 和 localStorage）中。</li>
+                <li><strong>非敏感数据</strong>：我们不收集、不存储也不传输您的任何个人身份信息（PII）。</li>
+                <li><strong>账户与同步（可选）</strong>：如果您选择使用登录/同步功能，我们将仅在您指定的同步服务器上传递加密的配置数据，用于在您的不同设备间共享设置。这些数据不包含您的浏览记录或敏感账户信息。</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>2. 权限说明</h2>
+            <p>为了提供核心功能，X-Tab 申请了以下权限：</p>
+            <ul>
+                <li><strong>storage</strong>: 用于在本地保存您的个性化设置。</li>
+                <li><strong>unlimitedStorage</strong>: 确保在保存高清壁纸等大数据时不会因为配额不足而导致丢失。</li>
+                <li><strong>notifications</strong>: 用于在壁纸切换、同步成功等操作时向您发送反馈提示。</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. 第三方服务</h2>
+            <ul>
+                <li><strong>壁纸服务</strong>：如果您启用在线壁纸功能，我们会向第三方 API（如 Bing 或指定的壁纸接口）请求图片。这些请求遵循对应服务商的隐私政策。</li>
+                <li><strong>天气服务</strong>：当您查看天气时，我们会向天气数据提供商发送您的地理位置信息（如城市名称），以便获取相关的气象数据。</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. 数据安全</h2>
+            <p>由于绝大部分数据仅保存在您的本地设备上，数据的安全性取决于您对设备和浏览器的保护。对于同步功能，我们建议您使用强密码，并选择可信的同步服务器。</p>
+        </section>
+
+        <section>
+            <h2>5. 政策变更</h2>
+            <p>我们可能会不时更新本隐私政策。任何更改都将发布在此页面上。</p>
+        </section>
+
+        <section>
+            <h2>6. 联系我们</h2>
+            <p>如果您对本隐私政策有任何疑问，请通过开发者渠道与我们联系。</p>
+        </section>
+
+        <hr>
+
+        <footer>
+            <p>注意：您可以将此内容托管到 GitHub Pages、码云 (Gitee) 或您的个人网站上。</p>
+        </footer>
+    </div>
+
+    <script>
+        // 检测系统主题或根据需要手动切换
+        const theme = localStorage.getItem('theme') || 'dark';
+        document.body.setAttribute('data-theme', theme);
+    </script>
+</body>
+</html>
